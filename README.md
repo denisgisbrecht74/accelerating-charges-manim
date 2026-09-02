@@ -18,7 +18,7 @@ not included.
 | `scenes/scene_03_donut.py` | `Donut` | Angular radiation pattern, wave, and energy argument |
 | `scenes/scene_03_relativity.py` | `Squeeze`, `Chasing`, `Headlight`, `HeadlightCircle` | Relativistic field compression and beaming |
 
-## Implementation notes
+## How the animations work
 
 ### Retarded field-line geometry
 
@@ -49,6 +49,34 @@ RGBA array and displayed as a Manim `ImageMobject`.
 The donut-like angular envelope comes from `sin(theta)`: radiation vanishes
 along the acceleration axis and is strongest perpendicular to it. The screen
 shows a two-dimensional slice through that three-dimensional angular pattern.
+
+### Radiation shell and angular pattern
+
+The outgoing shell is divided into short `AnnularSector` elements whose
+opacity follows `sin²(theta)`. This makes the shell brightest broadside to the
+acceleration and dark along its axis.
+
+The familiar donut is drawn separately as a plot of radiated power per
+direction. A two-dimensional polar curve is swept around the acceleration axis
+to create a wireframe surface of revolution, then projected into the Manim
+frame. The donut is therefore an angular diagram; the object that propagates
+through space is the spherical radiation shell.
+
+### Relativistic motion
+
+For a uniformly moving charge, directions sampled uniformly in the rest frame
+are mapped into the lab frame with
+
+```text
+tan(theta_lab) = gamma tan(theta_rest).
+```
+
+The relativistic radiation scenes solve for retarded emission time on a NumPy
+grid and evaluate the angular field pattern there. This produces the forward
+beaming visible as the charge's speed approaches `c`. Expanding shells are
+centred on the source positions from which they were emitted, making the
+front-to-back bunching a consequence of the geometry rather than a decorative
+effect.
 
 ## Installation
 
@@ -84,13 +112,6 @@ manim -pql scenes/scene_03_donut.py Donut
 
 manim -pql scenes/scene_03_relativity.py \
   Squeeze Chasing Headlight HeadlightCircle
-```
-
-Two representative scenes can be rendered individually with:
-
-```bash
-manim -pql scenes/scene_01_setup.py Rule3SpeedLimit
-manim -pql scenes/scene_02_geometry.py TheWave
 ```
 
 ## Scope and accuracy
