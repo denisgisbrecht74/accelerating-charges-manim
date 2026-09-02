@@ -124,7 +124,17 @@ evaluate the field expressions documented directly in the source.
 
 ## License
 
-All files in this repository are available under the [MIT License](LICENSE).
-The license applies only to the contents of this repository. The original
+Copyright (c) 2026 Physical Intuition.
+
+Unless otherwise noted, the contents of this repository are available under
+the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+License](LICENSE) ([license summary](https://creativecommons.org/licenses/by-nc-sa/4.0/)).
+
+You may share and adapt the material for noncommercial purposes, provided that
+you credit Physical Intuition, link to this repository and the license, state
+whether you made changes, and distribute adaptations under the same license.
+Commercial use requires separate permission from Physical Intuition.
+
+This license applies only to the contents of this repository. The original
 video, narration, channel identity, thumbnails, and rendered media are not part
 of this repository and remain separately copyrighted.
