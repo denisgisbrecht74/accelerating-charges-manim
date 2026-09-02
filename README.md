@@ -18,12 +18,7 @@ not included.
 | `scenes/scene_03_donut.py` | `Donut` | Angular radiation pattern, wave, and energy argument |
 | `scenes/scene_03_relativity.py` | `Squeeze`, `Chasing`, `Headlight`, `HeadlightCircle` | Relativistic field compression and beaming |
 
-The animations mentioned in the YouTube comment are:
-
-- Around **2:37**: `Rule3SpeedLimit`
-- Around **8:00–8:34**: `TheWave`
-
-## How the two requested animations work
+## Implementation notes
 
 ### Retarded field-line geometry
 
@@ -91,7 +86,7 @@ manim -pql scenes/scene_03_relativity.py \
   Squeeze Chasing Headlight HeadlightCircle
 ```
 
-To render only the two animations discussed in the comment:
+Two representative scenes can be rendered individually with:
 
 ```bash
 manim -pql scenes/scene_01_setup.py Rule3SpeedLimit
@@ -108,6 +103,7 @@ evaluate the field expressions documented directly in the source.
 
 ## License
 
-The source code in this repository is released under the MIT License. The
-original video, narration, channel branding, thumbnails, and rendered media are
-not included in that license.
+All files in this repository are available under the [MIT License](LICENSE).
+The license applies only to the contents of this repository. The original
+video, narration, channel identity, thumbnails, and rendered media are not part
+of this repository and remain separately copyrighted.
