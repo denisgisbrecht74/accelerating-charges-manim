@@ -3,6 +3,9 @@
 This repository contains the Manim animation source for the Physical Intuition
 video **Why Accelerating Charges Radiate**.
 
+Part 2, [But Why Do Moving Charges Have a Magnetic Field?](https://github.com/denisgisbrecht74/magnetism-manim),
+has its own repository.
+
 It includes every production animation scene from the video, together with the
 shared drawing helpers and background needed to render them. Narration, audio,
 thumbnails, research notes, raw renders, and archived drafts are intentionally
